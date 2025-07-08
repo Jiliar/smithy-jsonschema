@@ -1,0 +1,2143 @@
+{
+    "smithy": "2.0",
+    "metadata": {
+        "suppressions": [
+            {
+                "id": "UnreferencedShape",
+                "namespace": "alloy",
+                "reason": "This is a library namespace."
+            }
+        ]
+    },
+    "shapes": {
+        "alloy#DataExample": {
+            "type": "union",
+            "members": {
+                "smithy": {
+                    "target": "smithy.api#Document"
+                },
+                "json": {
+                    "target": "smithy.api#Document"
+                },
+                "string": {
+                    "target": "smithy.api#String"
+                }
+            }
+        },
+        "alloy#DayOfWeek": {
+            "type": "enum",
+            "members": {
+                "MONDAY": {
+                    "target": "smithy.api#Unit",
+                    "traits": {
+                        "smithy.api#enumValue": "MONDAY"
+                    }
+                },
+                "TUESDAY": {
+                    "target": "smithy.api#Unit",
+                    "traits": {
+                        "smithy.api#enumValue": "TUESDAY"
+                    }
+                },
+                "WEDNESDAY": {
+                    "target": "smithy.api#Unit",
+                    "traits": {
+                        "smithy.api#enumValue": "WEDNESDAY"
+                    }
+                },
+                "THURSDAY": {
+                    "target": "smithy.api#Unit",
+                    "traits": {
+                        "smithy.api#enumValue": "THURSDAY"
+                    }
+                },
+                "FRIDAY": {
+                    "target": "smithy.api#Unit",
+                    "traits": {
+                        "smithy.api#enumValue": "FRIDAY"
+                    }
+                },
+                "SATURDAY": {
+                    "target": "smithy.api#Unit",
+                    "traits": {
+                        "smithy.api#enumValue": "SATURDAY"
+                    }
+                },
+                "SUNDAY": {
+                    "target": "smithy.api#Unit",
+                    "traits": {
+                        "smithy.api#enumValue": "SUNDAY"
+                    }
+                }
+            }
+        },
+        "alloy#LocalDate": {
+            "type": "string",
+            "traits": {
+                "alloy#dateFormat": {}
+            }
+        },
+        "alloy#LocalDateTime": {
+            "type": "string",
+            "traits": {
+                "alloy#localDateTimeFormat": {}
+            }
+        },
+        "alloy#LocalTime": {
+            "type": "string",
+            "traits": {
+                "alloy#localTimeFormat": {}
+            }
+        },
+        "alloy#Month": {
+            "type": "enum",
+            "members": {
+                "JANUARY": {
+                    "target": "smithy.api#Unit",
+                    "traits": {
+                        "smithy.api#enumValue": "JANUARY"
+                    }
+                },
+                "FEBRUARY": {
+                    "target": "smithy.api#Unit",
+                    "traits": {
+                        "smithy.api#enumValue": "FEBRUARY"
+                    }
+                },
+                "MARCH": {
+                    "target": "smithy.api#Unit",
+                    "traits": {
+                        "smithy.api#enumValue": "MARCH"
+                    }
+                },
+                "APRIL": {
+                    "target": "smithy.api#Unit",
+                    "traits": {
+                        "smithy.api#enumValue": "APRIL"
+                    }
+                },
+                "MAY": {
+                    "target": "smithy.api#Unit",
+                    "traits": {
+                        "smithy.api#enumValue": "MAY"
+                    }
+                },
+                "JUNE": {
+                    "target": "smithy.api#Unit",
+                    "traits": {
+                        "smithy.api#enumValue": "JUNE"
+                    }
+                },
+                "JULY": {
+                    "target": "smithy.api#Unit",
+                    "traits": {
+                        "smithy.api#enumValue": "JULY"
+                    }
+                },
+                "AUGUST": {
+                    "target": "smithy.api#Unit",
+                    "traits": {
+                        "smithy.api#enumValue": "AUGUST"
+                    }
+                },
+                "SEPTEMBER": {
+                    "target": "smithy.api#Unit",
+                    "traits": {
+                        "smithy.api#enumValue": "SEPTEMBER"
+                    }
+                },
+                "OCTOBER": {
+                    "target": "smithy.api#Unit",
+                    "traits": {
+                        "smithy.api#enumValue": "OCTOBER"
+                    }
+                },
+                "NOVEMBER": {
+                    "target": "smithy.api#Unit",
+                    "traits": {
+                        "smithy.api#enumValue": "NOVEMBER"
+                    }
+                },
+                "DECEMBER": {
+                    "target": "smithy.api#Unit",
+                    "traits": {
+                        "smithy.api#enumValue": "DECEMBER"
+                    }
+                }
+            }
+        },
+        "alloy#MonthDay": {
+            "type": "string",
+            "traits": {
+                "alloy#monthDayFormat": {}
+            }
+        },
+        "alloy#OffsetDateTime": {
+            "type": "timestamp",
+            "traits": {
+                "alloy#offsetDateTimeFormat": {},
+                "smithy.api#timestampFormat": "date-time"
+            }
+        },
+        "alloy#OffsetTime": {
+            "type": "string",
+            "traits": {
+                "alloy#offsetTimeFormat": {}
+            }
+        },
+        "alloy#UUID": {
+            "type": "string",
+            "traits": {
+                "alloy#uuidFormat": {}
+            }
+        },
+        "alloy#UncheckedExample": {
+            "type": "structure",
+            "members": {
+                "title": {
+                    "target": "smithy.api#String",
+                    "traits": {
+                        "smithy.api#required": {}
+                    }
+                },
+                "documentation": {
+                    "target": "smithy.api#String"
+                },
+                "input": {
+                    "target": "smithy.api#Document"
+                },
+                "output": {
+                    "target": "smithy.api#Document"
+                }
+            },
+            "traits": {
+                "smithy.api#private": {}
+            }
+        },
+        "alloy#Year": {
+            "type": "integer",
+            "traits": {
+                "alloy#yearFormat": {}
+            }
+        },
+        "alloy#YearMonth": {
+            "type": "string",
+            "traits": {
+                "alloy#yearMonthFormat": {}
+            }
+        },
+        "alloy#ZoneId": {
+            "type": "string",
+            "traits": {
+                "alloy#zoneIdFormat": {}
+            }
+        },
+        "alloy#ZoneOffset": {
+            "type": "string",
+            "traits": {
+                "alloy#zoneOffsetFormat": {}
+            }
+        },
+        "alloy#ZonedDateTime": {
+            "type": "string",
+            "traits": {
+                "alloy#zonedDateTimeFormat": {}
+            }
+        },
+        "alloy#dataExamples": {
+            "type": "list",
+            "member": {
+                "target": "alloy#DataExample"
+            },
+            "traits": {
+                "smithy.api#documentation": "A trait for specifying what example data looks like. Differs from the `smithy.api#examples` trait in that\nit can be used for any shape, not just operations. Below is an explanation of the different example formats\nthat are supported.\n1. SMITHY - this means that the examples will be using the `Document` abstraction and will be specified in\na protocol agnostic way\n2. JSON - this means the examples will use the `Document` abstraction, but will not be validated by the smithy\n`NodeValidationVisitor` like the first type are. This type can be used to specify protocol specific examples\n3. STRING - this is just a string example and anything can be provided inside of the string.\nThis can be helpful for showing e.g. xml or another encoding that isn't JSON and therefore doesn't fit nicely\n with `Node` semantics",
+                "smithy.api#trait": {
+                    "selector": ":not(:test(service, operation, resource))"
+                }
+            }
+        },
+        "alloy#dateFormat": {
+            "type": "structure",
+            "members": {},
+            "traits": {
+                "smithy.api#documentation": "This trait indicates that a String value contains a date without\na time component. Following the RFC-3339 (an extension of ISO 8601),\nthe default for a date is the following:\ndate-fullyear   = 4DIGIT\ndate-month      = 2DIGIT  ; 01-12\ndate-mday       = 2DIGIT  ; 01-28, 01-29, 01-30, 01-31 based on\n                          ; month/year\nfull-date       = date-fullyear \"-\" date-month \"-\" date-mday\n\nSee: https://www.rfc-editor.org/rfc/rfc3339#section-5.6\ne.g.: \"2022-03-30\"\nIf a time component is required, you can use smithy.api#Timestamp",
+                "smithy.api#trait": {
+                    "selector": ":test(string, member > string)"
+                }
+            }
+        },
+        "alloy#defaultValue": {
+            "type": "document",
+            "traits": {
+                "smithy.api#documentation": "Use this trait to give a default value to a structure member. This\nis not the same as smithy.api#default which is more constrained.\nYou can use `defaultValue` to specify a default that does not align\nwith the target's shape constraints, where as Smithy's `default` trait\nprevents that. For example:\n\n```smithy\n@length(min:5)\nstring MyString\nstructure MyStruct {\n  @defaultValue(\"N/A\") // that's valid\n  s1: MyString\n  s2: MyString = \"N/A\" // that's invalid\n}\n```",
+                "smithy.api#trait": {
+                    "selector": "structure > member :test(> :is(simpleType, list, map))",
+                    "conflicts": [
+                        "smithy.api#required"
+                    ]
+                }
+            }
+        },
+        "alloy#discriminated": {
+            "type": "string",
+            "traits": {
+                "smithy.api#documentation": "Discriminated unions contain the information about which\nbranch of a union is encoded inside of the object itself.\nThe following union:\nstructure One {\n  a: Int\n}\nstructure Two {\n  b: String\n}\nunion Test {\n  one: One\n  two: Two\n}\nwould normally be encoded in JSON as:\n{ \"one\": { \"a\": 123 } }\nwhen annotated with `@discriminated(\"type\")`, it will\ninstead be encoded as:\n{ \"a\": 123, \"type\": \"one\" }\nThis is more efficient than using an untagged encoding,\nbut less efficient than using the default tagged union\nencoding. Therefore, it should only be used when necessary.\nTagged union encodings should be used wherever possible.",
+                "smithy.api#trait": {
+                    "selector": "union",
+                    "conflicts": [
+                        "alloy#untagged"
+                    ]
+                }
+            }
+        },
+        "alloy#jsonUnknown": {
+            "type": "structure",
+            "members": {},
+            "traits": {
+                "smithy.api#documentation": "Retain unknown fields of a containing structure in this member.\nIn case of unions, retain unknown cases in this member (open unions).\nFor both discriminated and tagged unions, this retains the entire object.\nFor untagged unions, having a Document member has the same effect.",
+                "smithy.api#trait": {
+                    "selector": "\n        :is(\n            structure > member :test(> map > member[id|member=value] > document),\n            union:not([trait|alloy#untagged]) > member :test(> document)\n        )\n    ",
+                    "structurallyExclusive": "member",
+                    "conflicts": [
+                        "smithy.api#jsonName"
+                    ]
+                }
+            }
+        },
+        "alloy#localDateTimeFormat": {
+            "type": "structure",
+            "members": {},
+            "traits": {
+                "smithy.api#documentation": "This trait indicates that a String contains a date-time value without a\ntimezone component in the ISO-8601 format YYYY-mm-DDTHH:MM:SS[.s{1,9}]\nFractional seconds support a precision up to the nanosecond.",
+                "smithy.api#trait": {
+                    "selector": ":test(string, member > string)"
+                }
+            }
+        },
+        "alloy#localTimeFormat": {
+            "type": "structure",
+            "members": {},
+            "traits": {
+                "smithy.api#documentation": "This trait indicates that a String contains a time value without a timezone\ncomponent in the ISO-8601 format HH:MM:SS[.ss{1,9}]\nFractional seconds support a precision up to the nanosecond",
+                "smithy.api#trait": {
+                    "selector": ":test(string, member > string)"
+                }
+            }
+        },
+        "alloy#monthDayFormat": {
+            "type": "structure",
+            "members": {},
+            "traits": {
+                "smithy.api#documentation": "This trait indicates that a String contains a describint a month and day\nin the ISO-8601 format mm-DD\nExample: \"05-14\" reads as May 14th",
+                "smithy.api#trait": {
+                    "selector": ":test(string, member > string)"
+                }
+            }
+        },
+        "alloy#nullable": {
+            "type": "structure",
+            "members": {},
+            "traits": {
+                "smithy.api#documentation": "Use this trait to mark some field as nullable. This is to make\na distinction between an optional field that is missing and one\nthat's explicitly set to null.",
+                "smithy.api#trait": {
+                    "selector": ":not([trait|trait])"
+                }
+            }
+        },
+        "alloy#offsetDateTimeFormat": {
+            "type": "structure",
+            "members": {},
+            "traits": {
+                "smithy.api#documentation": "This trait indicates that a Timestamp should retain the time offset\ninformation as defined in RFC3339 Section 5.6.\nSee: https://www.rfc-editor.org/rfc/rfc3339#section-5.6\n\nMust be combined with the @timestampFormat(\"date-time\") trait as only this\nformat provides offset information.",
+                "smithy.api#trait": {
+                    "selector": ":test(timestamp, member > timestamp) [trait|timestampFormat = 'date-time']"
+                }
+            }
+        },
+        "alloy#offsetTimeFormat": {
+            "type": "structure",
+            "members": {},
+            "traits": {
+                "smithy.api#documentation": "This trait indicates that a String contains a time value with an offset in\nthe ISO-8601 format HH:MM:SS[.s{1,9}](+|-)HH:MM\nFractional seconds support a precision up to the nanosecond.",
+                "smithy.api#trait": {
+                    "selector": ":test(string, member > string)"
+                }
+            }
+        },
+        "alloy#openEnum": {
+            "type": "structure",
+            "members": {},
+            "traits": {
+                "smithy.api#documentation": "Specifies that an enumeration is open meaning that\nit can accept \"unknown\" values that are not explicitly\nspecified inside of the smithy enum shape definition.",
+                "smithy.api#trait": {
+                    "selector": ":test(enum, intEnum, [trait|enum])"
+                }
+            }
+        },
+        "alloy#simpleRestJson": {
+            "type": "structure",
+            "members": {},
+            "traits": {
+                "smithy.api#documentation": "A rest protocol that deals with JSON payloads only\nin HTTP requests and responses. These are encoded with\nthe content type `application/json`.\nSee Alloy documentation for more information.",
+                "smithy.api#protocolDefinition": {
+                    "traits": [
+                        "smithy.api#default",
+                        "smithy.api#error",
+                        "smithy.api#http",
+                        "smithy.api#httpError",
+                        "smithy.api#httpHeader",
+                        "smithy.api#httpLabel",
+                        "smithy.api#httpPayload",
+                        "smithy.api#httpPrefixHeaders",
+                        "smithy.api#httpQuery",
+                        "smithy.api#httpQueryParams",
+                        "smithy.api#httpResponseCode",
+                        "smithy.api#jsonName",
+                        "smithy.api#length",
+                        "smithy.api#pattern",
+                        "smithy.api#range",
+                        "smithy.api#required",
+                        "smithy.api#timestampFormat",
+                        "alloy#uuidFormat",
+                        "alloy#discriminated",
+                        "alloy#nullable",
+                        "alloy#untagged",
+                        "alloy#jsonUnknown",
+                        "alloy#openEnum"
+                    ]
+                },
+                "smithy.api#trait": {
+                    "selector": "service"
+                }
+            }
+        },
+        "alloy#structurePattern": {
+            "type": "structure",
+            "members": {
+                "pattern": {
+                    "target": "smithy.api#String",
+                    "traits": {
+                        "smithy.api#required": {}
+                    }
+                },
+                "target": {
+                    "target": "smithy.api#String",
+                    "traits": {
+                        "smithy.api#idRef": {
+                            "selector": "structure"
+                        },
+                        "smithy.api#required": {}
+                    }
+                }
+            },
+            "traits": {
+                "smithy.api#trait": {
+                    "selector": "string"
+                }
+            }
+        },
+        "alloy#uncheckedExamples": {
+            "type": "list",
+            "member": {
+                "target": "alloy#UncheckedExample"
+            },
+            "traits": {
+                "smithy.api#documentation": "A version of @examples that is not tied to a validator",
+                "smithy.api#trait": {
+                    "selector": "operation"
+                }
+            }
+        },
+        "alloy#untagged": {
+            "type": "structure",
+            "members": {},
+            "traits": {
+                "smithy.api#documentation": "Implies a different encoding for unions where\ndifferent alternatives are not tagged. This union type\nshould be avoided whenever possible for performance\nreasons. However, some third party APIs use it so it\nis important to be able to represent it.\nThe following union:\nstructure One {\n  a: Int\n}\nstructure Two {\n  b: String\n}\nunion Test {\n  one: One\n  two: Two\n}\nwould normally be encoded in JSON as\n{ \"one\": { \"a\": 123 } }\nWhen it is annotated with `@untagged`, it is\ninstead encoded as:\n{ \"a\": 123 }. Therefore the parser will need to try\neach different alternative in the union before it can\ndetermine which one is appropriate.",
+                "smithy.api#trait": {
+                    "selector": "union",
+                    "conflicts": [
+                        "alloy#discriminated"
+                    ]
+                }
+            }
+        },
+        "alloy#urlFormFlattened": {
+            "type": "structure",
+            "members": {},
+            "traits": {
+                "smithy.api#documentation": "Unwraps the values of a list, set, or map into the containing\nstructure/union.",
+                "smithy.api#trait": {
+                    "selector": ":is(structure, union) > :test(member > :test(list, map))",
+                    "breakingChanges": [
+                        {
+                            "change": "any"
+                        }
+                    ]
+                }
+            }
+        },
+        "alloy#urlFormName": {
+            "type": "string",
+            "traits": {
+                "smithy.api#documentation": "Changes the serialized key of a structure, union, or member.",
+                "smithy.api#pattern": "^[a-zA-Z_][a-zA-Z_0-9-]*$",
+                "smithy.api#trait": {
+                    "selector": ":is(structure, union, member)",
+                    "breakingChanges": [
+                        {
+                            "change": "any"
+                        }
+                    ]
+                }
+            }
+        },
+        "alloy#uuidFormat": {
+            "type": "structure",
+            "members": {},
+            "traits": {
+                "smithy.api#documentation": "UUID v4 compliant with [RFC 4122](https://www.rfc-editor.org/rfc/rfc4122)",
+                "smithy.api#trait": {
+                    "selector": "string"
+                }
+            }
+        },
+        "alloy#yearFormat": {
+            "type": "structure",
+            "members": {},
+            "traits": {
+                "smithy.api#documentation": "A year in the ISO-8601 format.",
+                "smithy.api#trait": {
+                    "selector": ":test(integer, member > integer)"
+                }
+            }
+        },
+        "alloy#yearMonthFormat": {
+            "type": "structure",
+            "members": {},
+            "traits": {
+                "smithy.api#documentation": "This trait indicates that a String contains a value describng a year and\nmonth in the ISO-8601 format.\nExample: 2025-05 reads as May of year 2025",
+                "smithy.api#trait": {
+                    "selector": ":test(string, member > string)"
+                }
+            }
+        },
+        "alloy#zoneIdFormat": {
+            "type": "structure",
+            "members": {},
+            "traits": {
+                "smithy.api#documentation": "This trait indicates that a String contains a timezone identifier such as\nAmerica/New_York or an offset from UTC such as +01:00",
+                "smithy.api#trait": {
+                    "selector": ":test(string, member > string)"
+                }
+            }
+        },
+        "alloy#zoneOffsetFormat": {
+            "type": "structure",
+            "members": {},
+            "traits": {
+                "smithy.api#documentation": "This trait indicates that a String contains a timezone offset from UTC\nsuch as +01:00",
+                "smithy.api#trait": {
+                    "selector": ":test(string, member > string)"
+                }
+            }
+        },
+        "alloy#zonedDateTimeFormat": {
+            "type": "structure",
+            "members": {},
+            "traits": {
+                "smithy.api#documentation": "This trait indicates that a String contains a time value with an offset and\na timezone identifier in the ISO-8601 format\nYYYY-mm-DDTHH:MM:SS[.s{1,9}](+|-)HH:MM\\[ZONEID]\nFractional seconds support a precision up to the nanosecond.",
+                "smithy.api#trait": {
+                    "selector": ":test(string, member > string)"
+                }
+            }
+        },
+        "alloy.common#countryCodeFormat": {
+            "type": "structure",
+            "members": {},
+            "traits": {
+                "smithy.api#documentation": "ISO 3166-1 Alpha-2 country code\nFull list in https://www.iso.org/obp/ui/#search/code/\nexample: \"AF\", \"US\"",
+                "smithy.api#trait": {
+                    "selector": ":test(string, member > string)"
+                }
+            }
+        },
+        "alloy.common#emailFormat": {
+            "type": "structure",
+            "members": {},
+            "traits": {
+                "smithy.api#documentation": "Email address as defined in https://www.rfc-editor.org/rfc/rfc2821 and https://www.rfc-editor.org/rfc/rfc2822\nA more human-readable format is available here: https://www.rfc-editor.org/rfc/rfc3696#section-3",
+                "smithy.api#trait": {
+                    "selector": ":test(string, member > string)"
+                }
+            }
+        },
+        "alloy.common#hexColorCodeFormat": {
+            "type": "structure",
+            "members": {},
+            "traits": {
+                "smithy.api#documentation": "A hex triplet representing a RGB color code\nexample: \"#09C\" (short) or \"#0099CC\" (full)",
+                "smithy.api#trait": {
+                    "selector": ":test(string, member > string)"
+                }
+            }
+        },
+        "alloy.common#languageCodeFormat": {
+            "type": "structure",
+            "members": {},
+            "traits": {
+                "smithy.api#documentation": "ISO 639-1 Alpha-2 language code or Language for short.\nColumn `ISO 639-1` in https://www.loc.gov/standards/iso639-2/php/English_list.php\nexample: \"fr\", \"en\"",
+                "smithy.api#trait": {
+                    "selector": ":test(string, member > string)"
+                }
+            }
+        },
+        "alloy.common#languageTagFormat": {
+            "type": "structure",
+            "members": {},
+            "traits": {
+                "smithy.api#documentation": "BCP 47 Language Tag\nIETF RFC: https://tools.ietf.org/search/bcp47\nexample: \"fr-CA\", \"en-US\"",
+                "smithy.api#trait": {
+                    "selector": ":test(string, member > string)"
+                }
+            }
+        },
+        "alloy.openapi#openapiExtensions": {
+            "type": "map",
+            "key": {
+                "target": "smithy.api#String"
+            },
+            "value": {
+                "target": "smithy.api#Document"
+            },
+            "traits": {
+                "smithy.api#documentation": "This traits allows the encoding of OpenAPI Extensions\nas defined in https://swagger.io/docs/specification/openapi-extensions/.",
+                "smithy.api#trait": {}
+            }
+        },
+        "alloy.openapi#summary": {
+            "type": "string",
+            "traits": {
+                "smithy.api#length": {
+                    "min": 1
+                },
+                "smithy.api#trait": {
+                    "selector": "operation"
+                }
+            }
+        },
+        "alloy.proto#Range": {
+            "type": "structure",
+            "members": {
+                "start": {
+                    "target": "smithy.api#Integer",
+                    "traits": {
+                        "smithy.api#required": {}
+                    }
+                },
+                "end": {
+                    "target": "smithy.api#Integer",
+                    "traits": {
+                        "smithy.api#required": {}
+                    }
+                }
+            }
+        },
+        "alloy.proto#ReservedFieldsDefinition": {
+            "type": "union",
+            "members": {
+                "name": {
+                    "target": "smithy.api#String"
+                },
+                "number": {
+                    "target": "smithy.api#Integer"
+                },
+                "range": {
+                    "target": "alloy.proto#Range"
+                }
+            }
+        },
+        "alloy.proto#grpc": {
+            "type": "structure",
+            "members": {},
+            "traits": {
+                "smithy.api#documentation": "GRPC protocol as defined by https://grpc.io/",
+                "smithy.api#protocolDefinition": {
+                    "traits": [
+                        "alloy.proto#protoReservedFields",
+                        "alloy.proto#protoIndex",
+                        "alloy.proto#protoNumType",
+                        "alloy.proto#protoTimestampFormat",
+                        "alloy.proto#protoEnumFormat",
+                        "alloy.proto#protoEnabled",
+                        "alloy#uncheckedExamples"
+                    ]
+                },
+                "smithy.api#trait": {
+                    "selector": "service"
+                }
+            }
+        },
+        "alloy.proto#protoCompactLocalDate": {
+            "type": "structure",
+            "members": {},
+            "traits": {
+                "smithy.api#trait": {
+                    "selector": ":test(\n        string [trait|alloy#dateFormat],\n        member > string [trait|alloy#dateFormat],\n        member [trait|alloy#dateFormat] > string\n    )"
+                }
+            }
+        },
+        "alloy.proto#protoCompactMonthDay": {
+            "type": "structure",
+            "members": {},
+            "traits": {
+                "smithy.api#trait": {
+                    "selector": ":test(\n        string [trait|alloy#monthDayFormat],\n        member > string [trait|alloy#monthDayFormat],\n        member [trait|alloy#monthDayFormat] > string\n    )"
+                }
+            }
+        },
+        "alloy.proto#protoCompactOffsetDateTime": {
+            "type": "structure",
+            "members": {},
+            "traits": {
+                "smithy.api#trait": {
+                    "selector": ":test(\n        timestamp [trait|alloy#offsetDateTimeFormat],\n        member > timestamp [trait|alloy#offsetDateTimeFormat],\n        member [trait|alloy#offsetDateTimeFormat] > timestamp\n    )"
+                }
+            }
+        },
+        "alloy.proto#protoCompactUUID": {
+            "type": "structure",
+            "members": {},
+            "traits": {
+                "smithy.api#trait": {
+                    "selector": ":test(\n        string [trait|alloy#uuidFormat],\n        member > string [trait|alloy#uuidFormat],\n        member [trait|alloy#uuidFormat] > string\n    )"
+                }
+            }
+        },
+        "alloy.proto#protoCompactYearMonth": {
+            "type": "structure",
+            "members": {},
+            "traits": {
+                "smithy.api#trait": {
+                    "selector": ":test(\n        string [trait|alloy#yearMonthFormat],\n        member > string [trait|alloy#yearMonthFormat],\n        member [trait|alloy#yearMonthFormat] > string\n    )"
+                }
+            }
+        },
+        "alloy.proto#protoEnabled": {
+            "type": "structure",
+            "members": {},
+            "traits": {
+                "smithy.api#documentation": "This trait can be used to enable protobuf conversion\non services or structures that are not a part of a\nGRPC service.",
+                "smithy.api#trait": {
+                    "selector": ":test(structure, service)"
+                }
+            }
+        },
+        "alloy.proto#protoEnumFormat": {
+            "type": "enum",
+            "members": {
+                "ORDINAL": {
+                    "target": "smithy.api#Unit",
+                    "traits": {
+                        "smithy.api#enumValue": "ORDINAL"
+                    }
+                },
+                "STRING_VALUE": {
+                    "target": "smithy.api#Unit",
+                    "traits": {
+                        "smithy.api#enumValue": "STRING_VALUE"
+                    }
+                }
+            },
+            "traits": {
+                "smithy.api#documentation": "Specifies how enumeration value should be encodeds in protobuf.\nORDINAL indicates that the enum value should be encoded as an integer.\nSTRING_VALUE indicates that the enum value should be encoded as the\nstring value.",
+                "smithy.api#trait": {
+                    "selector": ":test(enum :not([trait|alloy#openEnum]), member > enum :not([trait|alloy#openEnum]))"
+                }
+            }
+        },
+        "alloy.proto#protoIndex": {
+            "type": "integer",
+            "traits": {
+                "smithy.api#documentation": "Marks an explicit index to be used for a structure member when it is\ninterpreted as protobuf. For example:\n\nstructure Test { @protoIndex(2) str: String }\n\nIs equivalent to:\n\nmessage Test { string str = 2 }",
+                "smithy.api#trait": {
+                    "selector": ":is(structure > member,union > member,enum > member, intEnum > member)"
+                }
+            }
+        },
+        "alloy.proto#protoInlinedOneOf": {
+            "type": "structure",
+            "members": {},
+            "traits": {
+                "smithy.api#documentation": "This trait can be used to customize the rendering of an\nUnion shape during the conversion to Protobuf models.\nUnion in Protobuf are typically encoded using `oneOf`.\n\n`oneOf` can only be used within `message` and each of their\nmember has an index. This makes them tricky to render.\nOne possible solution is to create a synthetic `message` to\nhost the `oneOf`, and then use that `message` FQN at use site\nwhen refering to the Union.\nThere is an alternate encoding where you render the `oneOf`\ninside the `message` where it's used. You can only use this encoding\nif the Union is used only inside of one `structure`.\n\nYou can use this trait, along with the validator provided, to\nimplement this encoding.",
+                "smithy.api#trait": {
+                    "selector": "union"
+                }
+            }
+        },
+        "alloy.proto#protoNumType": {
+            "type": "enum",
+            "members": {
+                "SIGNED": {
+                    "target": "smithy.api#Unit",
+                    "traits": {
+                        "smithy.api#enumValue": "SIGNED"
+                    }
+                },
+                "UNSIGNED": {
+                    "target": "smithy.api#Unit",
+                    "traits": {
+                        "smithy.api#enumValue": "UNSIGNED"
+                    }
+                },
+                "FIXED": {
+                    "target": "smithy.api#Unit",
+                    "traits": {
+                        "smithy.api#enumValue": "FIXED"
+                    }
+                },
+                "FIXED_SIGNED": {
+                    "target": "smithy.api#Unit",
+                    "traits": {
+                        "smithy.api#enumValue": "FIXED_SIGNED"
+                    }
+                }
+            },
+            "traits": {
+                "smithy.api#documentation": "Specifies which type of number signing should be used on integers\nand longs.",
+                "smithy.api#trait": {
+                    "selector": ":test(integer, long, member > :test(integer, long))"
+                }
+            }
+        },
+        "alloy.proto#protoReservedFields": {
+            "type": "list",
+            "member": {
+                "target": "alloy.proto#ReservedFieldsDefinition"
+            },
+            "traits": {
+                "smithy.api#documentation": "Marks certain field indexes as unusable by the smithy\nspecification. For example, if a range is provided of\n1 to 10 then the proto indexes for any fields in that\nstructure must fall outside of that range. Ranges\nare inclusive.",
+                "smithy.api#trait": {
+                    "selector": "structure"
+                }
+            }
+        },
+        "alloy.proto#protoTimestampFormat": {
+            "type": "enum",
+            "members": {
+                "PROTOBUF": {
+                    "target": "smithy.api#Unit",
+                    "traits": {
+                        "smithy.api#enumValue": "PROTOBUF"
+                    }
+                },
+                "EPOCH_MILLIS": {
+                    "target": "smithy.api#Unit",
+                    "traits": {
+                        "smithy.api#enumValue": "EPOCH_MILLIS"
+                    }
+                },
+                "RFC3339_STRING": {
+                    "target": "smithy.api#Unit",
+                    "traits": {
+                        "smithy.api#enumValue": "RFC3339_STRING"
+                    }
+                }
+            },
+            "traits": {
+                "smithy.api#documentation": "Specifies which type of timestamp representation should be used\nPROTOBUF indicates that the default encoding should be used\nEPOCH_MILLIS indicates that an int64 should be used instead of the\ndefault encoding.\nRFC3339_STRING indicates that the timestamp should be encoded as a string\nusing the format described in RFC3339 section 5.6.",
+                "smithy.api#trait": {
+                    "selector": ":test(timestamp, member > timestamp)"
+                }
+            }
+        },
+        "alloy.proto#protoWrapped": {
+            "type": "structure",
+            "members": {},
+            "traits": {
+                "smithy.api#trait": {
+                    "selector": ":test(simpleType, list, map, member > simpleType, member > list, member > map)"
+                }
+            }
+        },
+        "aws.api#ArnNamespace": {
+            "type": "string",
+            "traits": {
+                "smithy.api#documentation": "A string representing a service's ARN namespace.",
+                "smithy.api#pattern": "^[a-z0-9.\\-]{1,63}$",
+                "smithy.api#private": {}
+            }
+        },
+        "aws.api#CloudFormationName": {
+            "type": "string",
+            "traits": {
+                "smithy.api#documentation": "A string representing a CloudFormation service name.",
+                "smithy.api#pattern": "^[A-Z][A-Za-z0-9]+$",
+                "smithy.api#private": {}
+            }
+        },
+        "aws.api#ResourceDelimiter": {
+            "type": "enum",
+            "members": {
+                "FORWARD_SLASH": {
+                    "target": "smithy.api#Unit",
+                    "traits": {
+                        "smithy.api#documentation": "The `/` character.",
+                        "smithy.api#enumValue": "/"
+                    }
+                },
+                "COLON": {
+                    "target": "smithy.api#Unit",
+                    "traits": {
+                        "smithy.api#documentation": "The `:` character.",
+                        "smithy.api#enumValue": ":"
+                    }
+                }
+            },
+            "traits": {
+                "smithy.api#documentation": "The possible delimiters for an ARN resource segment.",
+                "smithy.api#private": {}
+            }
+        },
+        "aws.api#TagOperationReference": {
+            "type": "string",
+            "traits": {
+                "smithy.api#documentation": "Points to an operation designated for a tagging APi",
+                "smithy.api#idRef": {
+                    "failWhenMissing": true,
+                    "selector": "resource > operation"
+                }
+            }
+        },
+        "aws.api#TaggableApiConfig": {
+            "type": "structure",
+            "members": {
+                "tagApi": {
+                    "target": "aws.api#TagOperationReference",
+                    "traits": {
+                        "smithy.api#documentation": "The `tagApi` property is a string value that references a non-instance\nor create operation that creates or updates tags on the resource.",
+                        "smithy.api#required": {}
+                    }
+                },
+                "untagApi": {
+                    "target": "aws.api#TagOperationReference",
+                    "traits": {
+                        "smithy.api#documentation": "The `untagApi` property is a string value that references a non-instance\noperation that removes tags on the resource.",
+                        "smithy.api#required": {}
+                    }
+                },
+                "listTagsApi": {
+                    "target": "aws.api#TagOperationReference",
+                    "traits": {
+                        "smithy.api#documentation": "The `listTagsApi` property is a string value that references a non-\ninstance operation which gets the current tags on the resource.",
+                        "smithy.api#required": {}
+                    }
+                }
+            },
+            "traits": {
+                "smithy.api#documentation": "Structure representing the configuration of resource specific tagging APIs"
+            }
+        },
+        "aws.api#arn": {
+            "type": "structure",
+            "members": {
+                "template": {
+                    "target": "smithy.api#String",
+                    "traits": {
+                        "smithy.api#documentation": "Defines the ARN template. The provided string contains URI-template\nstyle label placeholders that contain the name of one of the identifiers\ndefined in the `identifiers` property of the resource. These labels can\nbe substituted at runtime with the actual identifiers of the resource.\nEvery identifier name of the resource MUST have corresponding label of\nthe same name. Note that percent-encoding **is not** performed on these\nplaceholder values; they are to be replaced literally. For relative ARN\ntemplates that have not set `absolute` to `true`, the template string\ncontains only the resource part of the ARN (for example,\n`foo/{MyResourceId}`). Relative ARNs MUST NOT start with \"/\".",
+                        "smithy.api#required": {}
+                    }
+                },
+                "absolute": {
+                    "target": "smithy.api#Boolean",
+                    "traits": {
+                        "smithy.api#documentation": "Set to true to indicate that the ARN template contains a fully-formed\nARN that does not need to be merged with the service. This type of ARN\nMUST be used when the identifier of a resource is an ARN or is based on\nthe ARN identifier of a parent resource."
+                    }
+                },
+                "noRegion": {
+                    "target": "smithy.api#Boolean",
+                    "traits": {
+                        "smithy.api#documentation": "Set to true to specify that the ARN does not contain a region. If not\nset, or if set to false, the resolved ARN will contain a placeholder\nfor the region. This can only be set to true if `absolute` is not set\nor is false."
+                    }
+                },
+                "noAccount": {
+                    "target": "smithy.api#Boolean",
+                    "traits": {
+                        "smithy.api#documentation": "Set to true to specify that the ARN does not contain an account ID. If\nnot set, or if set to false, the resolved ARN will contain a placeholder\nfor the customer account ID. This can only be set to true if absolute\nis not set or is false."
+                    }
+                },
+                "resourceDelimiter": {
+                    "target": "aws.api#ResourceDelimiter",
+                    "traits": {
+                        "smithy.api#documentation": "Defines which character is used to delimit sections of the resource\nsegment of an ARN. This can only be set if absolute is set to true."
+                    }
+                },
+                "reusable": {
+                    "target": "smithy.api#Boolean",
+                    "traits": {
+                        "smithy.api#documentation": "Set to true to indicate that an ARN may be reused for different\ninstances of a resource."
+                    }
+                }
+            },
+            "traits": {
+                "smithy.api#documentation": "Specifies an ARN template for the resource.",
+                "smithy.api#externalDocumentation": {
+                    "Reference": "https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"
+                },
+                "smithy.api#trait": {
+                    "selector": "resource"
+                }
+            }
+        },
+        "aws.api#arnReference": {
+            "type": "structure",
+            "members": {
+                "type": {
+                    "target": "smithy.api#String",
+                    "traits": {
+                        "smithy.api#documentation": "The AWS CloudFormation resource type contained in the ARN."
+                    }
+                },
+                "resource": {
+                    "target": "smithy.api#String",
+                    "traits": {
+                        "smithy.api#documentation": "An absolute shape ID that references the Smithy resource type contained\nin the ARN (e.g., `com.foo#SomeResource`). The targeted resource is not\nrequired to be found in the model, allowing for external shapes to be\nreferenced without needing to take on an additional dependency. If the\nshape is found in the model, it MUST target a resource shape, and the\nresource MUST be found within the closure of the referenced service\nshape."
+                    }
+                },
+                "service": {
+                    "target": "smithy.api#String",
+                    "traits": {
+                        "smithy.api#documentation": "The Smithy service absolute shape ID that is referenced by the ARN. The\ntargeted service is not required to be found in the model, allowing for\nexternal shapes to be referenced without needing to take on an\nadditional dependency."
+                    }
+                }
+            },
+            "traits": {
+                "smithy.api#documentation": "Marks a string as containing an ARN.",
+                "smithy.api#trait": {
+                    "selector": "string"
+                }
+            }
+        },
+        "aws.api#clientDiscoveredEndpoint": {
+            "type": "structure",
+            "members": {
+                "required": {
+                    "target": "smithy.api#Boolean",
+                    "traits": {
+                        "smithy.api#documentation": "This field denotes whether or not this operation requires the use of a\nspecific endpoint. If this field is false, the standard regional\nendpoint for a service can handle this request. The client will start\nsending requests to the standard regional endpoint while working to\ndiscover a more specific endpoint.",
+                        "smithy.api#required": {}
+                    }
+                }
+            },
+            "traits": {
+                "smithy.api#documentation": "Indicates that the target operation should use the client's endpoint\ndiscovery logic.",
+                "smithy.api#trait": {
+                    "selector": "operation"
+                }
+            }
+        },
+        "aws.api#clientEndpointDiscovery": {
+            "type": "structure",
+            "members": {
+                "operation": {
+                    "target": "smithy.api#String",
+                    "traits": {
+                        "smithy.api#documentation": "Indicates the operation that clients should use to discover endpoints\nfor the service.",
+                        "smithy.api#idRef": {
+                            "failWhenMissing": true,
+                            "selector": "operation"
+                        },
+                        "smithy.api#required": {}
+                    }
+                },
+                "error": {
+                    "target": "smithy.api#String",
+                    "traits": {
+                        "smithy.api#documentation": "Indicates the error that tells clients that the endpoint they are using\nis no longer valid. This error MUST be bound to any operation bound to\nthe service which is marked with the aws.api#clientDiscoveredEndpoint\ntrait.",
+                        "smithy.api#idRef": {
+                            "failWhenMissing": true,
+                            "selector": "structure[trait|error]"
+                        },
+                        "smithy.api#recommended": {}
+                    }
+                }
+            },
+            "traits": {
+                "smithy.api#documentation": "Configures endpoint discovery for the service.",
+                "smithy.api#trait": {
+                    "selector": "service"
+                }
+            }
+        },
+        "aws.api#clientEndpointDiscoveryId": {
+            "type": "structure",
+            "members": {},
+            "traits": {
+                "smithy.api#documentation": "Indicates members of the operation input which should be use to discover\nendpoints.",
+                "smithy.api#trait": {
+                    "selector": "operation[trait|aws.api#clientDiscoveredEndpoint] -[input]->\nstructure > :test(member[trait|required] > string)"
+                }
+            }
+        },
+        "aws.api#controlPlane": {
+            "type": "structure",
+            "members": {},
+            "traits": {
+                "smithy.api#documentation": "Defines a service, resource, or operation as operating on the control plane.",
+                "smithy.api#trait": {
+                    "selector": ":test(service, resource, operation)",
+                    "conflicts": [
+                        "aws.api#dataPlane"
+                    ]
+                }
+            }
+        },
+        "aws.api#data": {
+            "type": "enum",
+            "members": {
+                "CUSTOMER_CONTENT": {
+                    "target": "smithy.api#Unit",
+                    "traits": {
+                        "smithy.api#documentation": "Customer content means any software (including machine images), data,\ntext, audio, video or images that customers or any customer end user\ntransfers to AWS for processing, storage or hosting by AWS services in\nconnection with the customer’s accounts and any computational results\nthat customers or any customer end user derive from the foregoing\nthrough their use of AWS services.",
+                        "smithy.api#enumValue": "content"
+                    }
+                },
+                "CUSTOMER_ACCOUNT_INFORMATION": {
+                    "target": "smithy.api#Unit",
+                    "traits": {
+                        "smithy.api#documentation": "Account information means information about customers that customers\nprovide to AWS in connection with the creation or administration of\ncustomers’ accounts.",
+                        "smithy.api#enumValue": "account"
+                    }
+                },
+                "SERVICE_ATTRIBUTES": {
+                    "target": "smithy.api#Unit",
+                    "traits": {
+                        "smithy.api#documentation": "Service Attributes means service usage data related to a customer’s\naccount, such as resource identifiers, metadata tags, security and\naccess roles, rules, usage policies, permissions, usage statistics,\nlogging data, and analytics.",
+                        "smithy.api#enumValue": "usage"
+                    }
+                },
+                "TAG_DATA": {
+                    "target": "smithy.api#Unit",
+                    "traits": {
+                        "smithy.api#documentation": "Designates metadata tags applied to AWS resources.",
+                        "smithy.api#enumValue": "tagging"
+                    }
+                },
+                "PERMISSIONS_DATA": {
+                    "target": "smithy.api#Unit",
+                    "traits": {
+                        "smithy.api#documentation": "Designates security and access roles, rules, usage policies, and\npermissions.",
+                        "smithy.api#enumValue": "permissions"
+                    }
+                }
+            },
+            "traits": {
+                "smithy.api#documentation": "Designates the target as containing data of a known classification level.",
+                "smithy.api#trait": {
+                    "selector": ":test(simpleType, list, structure, union, member)"
+                }
+            }
+        },
+        "aws.api#dataPlane": {
+            "type": "structure",
+            "members": {},
+            "traits": {
+                "smithy.api#documentation": "Defines a service, resource, or operation as operating on the data plane.",
+                "smithy.api#trait": {
+                    "selector": ":test(service, resource, operation)",
+                    "conflicts": [
+                        "aws.api#controlPlane"
+                    ]
+                }
+            }
+        },
+        "aws.api#service": {
+            "type": "structure",
+            "members": {
+                "sdkId": {
+                    "target": "smithy.api#String",
+                    "traits": {
+                        "smithy.api#documentation": "The `sdkId` property is a required string value that specifies the AWS\nSDK service ID (e.g., \"API Gateway\"). This value is used for generating\nclient names in SDKs and for linking between services.",
+                        "smithy.api#required": {}
+                    }
+                },
+                "arnNamespace": {
+                    "target": "aws.api#ArnNamespace",
+                    "traits": {
+                        "smithy.api#documentation": "The `arnNamespace` property is a string value that defines the ARN service\nnamespace of the service (e.g., \"apigateway\"). This value is used in\nARNs assigned to resources in the service. If not set, this value\ndefaults to the lowercase name of the service shape."
+                    }
+                },
+                "cloudFormationName": {
+                    "target": "aws.api#CloudFormationName",
+                    "traits": {
+                        "smithy.api#documentation": "The `cloudFormationName` property is a string value that specifies the\nAWS CloudFormation service name (e.g., `ApiGateway`). When not set,\nthis value defaults to the name of the service shape. This value is\npart of the CloudFormation resource type name that is automatically\nassigned to resources in the service (e.g., `AWS::<NAME>::resourceName`)."
+                    }
+                },
+                "cloudTrailEventSource": {
+                    "target": "smithy.api#String",
+                    "traits": {
+                        "smithy.api#documentation": "The `cloudTrailEventSource` property is a string value that defines the\nAWS customer-facing eventSource property contained in CloudTrail event\nrecords emitted by the service. If not specified, this value defaults\nto the `arnNamespace` plus `.amazonaws.com`."
+                    }
+                },
+                "docId": {
+                    "target": "smithy.api#String",
+                    "traits": {
+                        "smithy.api#documentation": "The `docId` property is a string value that defines the identifier\nused to implemention linking between service and SDK documentation for\nAWS services. If not specified, this value defaults to the `sdkId` in\nlower case plus the service `version` property, separated by dashes."
+                    }
+                },
+                "endpointPrefix": {
+                    "target": "smithy.api#String",
+                    "traits": {
+                        "smithy.api#documentation": "The `endpointPrefix` property is a string value that identifies which\nendpoint in a given region should be used to connect to the service.\nFor example, most services in the AWS standard partition have endpoints\nwhich follow the format: `{endpointPrefix}.{region}.amazonaws.com`. A\nservice with the endpoint prefix example in the region us-west-2 might\nhave the endpoint example.us-west-2.amazonaws.com.\n\nThis value is not unique across services and is subject to change.\nTherefore, it MUST NOT be used for client naming or for any other\npurpose that requires a static, unique identifier. sdkId should be used\nfor those purposes. Additionally, this value can be used to attempt to\nresolve endpoints."
+                    }
+                }
+            },
+            "traits": {
+                "smithy.api#documentation": "An AWS service is defined using the `aws.api#service` trait. This trait\nprovides information about the service like the name used to generate AWS\nSDK client classes and the namespace used in ARNs.",
+                "smithy.api#trait": {
+                    "selector": "service"
+                }
+            }
+        },
+        "aws.api#tagEnabled": {
+            "type": "structure",
+            "members": {
+                "disableDefaultOperations": {
+                    "target": "smithy.api#Boolean",
+                    "traits": {
+                        "smithy.api#documentation": "The `disableDefaultOperations` property is a boolean value that specifies\nif the service does not have the standard tag operations supporting all\nresources on the service. Default value is `false`"
+                    }
+                }
+            },
+            "traits": {
+                "smithy.api#documentation": "Annotates a service as having tagging on 1 or more resources and associated\nAPIs to perform CRUD operations on those tags",
+                "smithy.api#trait": {
+                    "selector": "service"
+                },
+                "smithy.api#unstable": {}
+            }
+        },
+        "aws.api#taggable": {
+            "type": "structure",
+            "members": {
+                "property": {
+                    "target": "smithy.api#String",
+                    "traits": {
+                        "smithy.api#documentation": "The `property` property is a string value that identifies which\nresource property represents tags for the resource."
+                    }
+                },
+                "apiConfig": {
+                    "target": "aws.api#TaggableApiConfig",
+                    "traits": {
+                        "smithy.api#documentation": "Specifies configuration for resource specific tagging APIs if the\nresource has them."
+                    }
+                },
+                "disableSystemTags": {
+                    "target": "smithy.api#Boolean",
+                    "traits": {
+                        "smithy.api#documentation": "Flag indicating if the resource is not able to carry AWS system level.\nUsed by service principals. Default value is `false`"
+                    }
+                }
+            },
+            "traits": {
+                "smithy.api#documentation": "Indicates a resource supports CRUD operations for tags. Either through\nresource lifecycle or instance operations or tagging operations on the\nservice.",
+                "smithy.api#trait": {
+                    "selector": "resource"
+                },
+                "smithy.api#unstable": {}
+            }
+        },
+        "aws.auth#StringList": {
+            "type": "list",
+            "member": {
+                "target": "smithy.api#String"
+            },
+            "traits": {
+                "smithy.api#private": {}
+            }
+        },
+        "aws.auth#cognitoUserPools": {
+            "type": "structure",
+            "members": {
+                "providerArns": {
+                    "target": "aws.auth#StringList",
+                    "traits": {
+                        "smithy.api#documentation": "A list of the Amazon Cognito user pool ARNs. Each element is of this\nformat: `arn:aws:cognito-idp:{region}:{account_id}:userpool/{user_pool_id}`.",
+                        "smithy.api#required": {}
+                    }
+                }
+            },
+            "traits": {
+                "smithy.api#authDefinition": {},
+                "smithy.api#documentation": "Configures an Amazon Cognito User Pools auth scheme.",
+                "smithy.api#internal": {},
+                "smithy.api#tags": [
+                    "internal"
+                ],
+                "smithy.api#trait": {
+                    "selector": "service"
+                }
+            }
+        },
+        "aws.auth#sigv4": {
+            "type": "structure",
+            "members": {
+                "name": {
+                    "target": "smithy.api#String",
+                    "traits": {
+                        "smithy.api#documentation": "The signature version 4 service signing name to use in the credential\nscope when signing requests. This value SHOULD match the `arnNamespace`\nproperty of the `aws.api#service` trait if present and the `name`\nproperty of the `aws.api#sigv4a` trait if present.",
+                        "smithy.api#externalDocumentation": {
+                            "Reference": "https://docs.aws.amazon.com/general/latest/gr/sigv4-create-string-to-sign.html"
+                        },
+                        "smithy.api#length": {
+                            "min": 1
+                        },
+                        "smithy.api#required": {}
+                    }
+                }
+            },
+            "traits": {
+                "smithy.api#authDefinition": {
+                    "traits": [
+                        "aws.auth#unsignedPayload"
+                    ]
+                },
+                "smithy.api#documentation": "[Signature Version 4](https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html)\nis the process to add authentication information to AWS requests sent by HTTP. For\nsecurity, most requests to AWS must be signed with an access key, which consists\nof an access key ID and secret access key. These two keys are commonly referred to\nas your security credentials.",
+                "smithy.api#externalDocumentation": {
+                    "Reference": "https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html"
+                },
+                "smithy.api#trait": {
+                    "selector": "service",
+                    "breakingChanges": [
+                        {
+                            "change": "remove",
+                            "message": "Removing the existing authentication scheme is not backward compatible and can break existing clients' authentication."
+                        }
+                    ]
+                }
+            }
+        },
+        "aws.auth#sigv4a": {
+            "type": "structure",
+            "members": {
+                "name": {
+                    "target": "smithy.api#String",
+                    "traits": {
+                        "smithy.api#documentation": "The signature version 4a service signing name to use in the credential\nscope when signing requests. This value SHOULD match the `arnNamespace`\nproperty of the `aws.api#service` trait if present and the `name`\nproperty of the `aws.api#sigv4` trait.",
+                        "smithy.api#externalDocumentation": {
+                            "Reference": "https://docs.aws.amazon.com/general/latest/gr/sigv4-create-string-to-sign.html"
+                        },
+                        "smithy.api#length": {
+                            "min": 1
+                        },
+                        "smithy.api#required": {}
+                    }
+                }
+            },
+            "traits": {
+                "smithy.api#authDefinition": {
+                    "traits": [
+                        "aws.auth#unsignedPayload"
+                    ]
+                },
+                "smithy.api#documentation": "Signature Version 4 Asymmetric (SigV4A), an extension of Signature Version 4 (SigV4), is the\nprocess to add authentication information to AWS requests sent by HTTP. SigV4A is nearly\nidentical to SigV4, but also uses public-private keys and asymmetric cryptographic signatures\nfor every request. Most notably, SigV4A supports signatures for multi-region API requests.",
+                "smithy.api#externalDocumentation": {
+                    "Reference": "https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html",
+                    "Examples": "https://github.com/aws-samples/sigv4a-signing-examples"
+                },
+                "smithy.api#trait": {
+                    "selector": "service[trait|aws.auth#sigv4]",
+                    "breakingChanges": [
+                        {
+                            "change": "remove",
+                            "message": "Removing the existing authentication scheme is not backward compatible and can break existing clients' authentication."
+                        }
+                    ]
+                }
+            }
+        },
+        "aws.auth#unsignedPayload": {
+            "type": "structure",
+            "members": {},
+            "traits": {
+                "smithy.api#documentation": "Indicates that the request payload of a signed request is not to be used\nas part of the signature.",
+                "smithy.api#trait": {
+                    "selector": "operation"
+                }
+            }
+        },
+        "aws.customizations#s3UnwrappedXmlOutput": {
+            "type": "structure",
+            "members": {},
+            "traits": {
+                "smithy.api#documentation": "Indicates the response body from S3 is not wrapped in the\naws-restxml-protocol operation-level XML node. Intended to only be used by\nAWS S3.",
+                "smithy.api#trait": {
+                    "selector": "operation"
+                }
+            }
+        },
+        "aws.protocols#ChecksumAlgorithm": {
+            "type": "enum",
+            "members": {
+                "CRC64NVME": {
+                    "target": "smithy.api#Unit",
+                    "traits": {
+                        "smithy.api#documentation": "CRC64NVME",
+                        "smithy.api#enumValue": "CRC64NVME"
+                    }
+                },
+                "CRC32C": {
+                    "target": "smithy.api#Unit",
+                    "traits": {
+                        "smithy.api#documentation": "CRC32C",
+                        "smithy.api#enumValue": "CRC32C"
+                    }
+                },
+                "CRC32": {
+                    "target": "smithy.api#Unit",
+                    "traits": {
+                        "smithy.api#documentation": "CRC32",
+                        "smithy.api#enumValue": "CRC32"
+                    }
+                },
+                "SHA1": {
+                    "target": "smithy.api#Unit",
+                    "traits": {
+                        "smithy.api#documentation": "SHA1",
+                        "smithy.api#enumValue": "SHA1"
+                    }
+                },
+                "SHA256": {
+                    "target": "smithy.api#Unit",
+                    "traits": {
+                        "smithy.api#documentation": "SHA256",
+                        "smithy.api#enumValue": "SHA256"
+                    }
+                }
+            },
+            "traits": {
+                "smithy.api#private": {}
+            }
+        },
+        "aws.protocols#ChecksumAlgorithmSet": {
+            "type": "list",
+            "member": {
+                "target": "aws.protocols#ChecksumAlgorithm"
+            },
+            "traits": {
+                "smithy.api#length": {
+                    "min": 1
+                },
+                "smithy.api#private": {},
+                "smithy.api#uniqueItems": {}
+            }
+        },
+        "aws.protocols#HttpConfiguration": {
+            "type": "structure",
+            "members": {
+                "http": {
+                    "target": "aws.protocols#StringList",
+                    "traits": {
+                        "smithy.api#documentation": "The priority ordered list of supported HTTP protocol versions."
+                    }
+                },
+                "eventStreamHttp": {
+                    "target": "aws.protocols#StringList",
+                    "traits": {
+                        "smithy.api#documentation": "The priority ordered list of supported HTTP protocol versions that\nare required when using event streams with the service. If not set,\nthis value defaults to the value of the `http` member. Any entry in\n`eventStreamHttp` MUST also appear in `http`."
+                    }
+                }
+            },
+            "traits": {
+                "smithy.api#documentation": "Contains HTTP protocol configuration for HTTP-based protocols.",
+                "smithy.api#mixin": {
+                    "localTraits": [
+                        "smithy.api#private"
+                    ]
+                },
+                "smithy.api#private": {}
+            }
+        },
+        "aws.protocols#StringList": {
+            "type": "list",
+            "member": {
+                "target": "smithy.api#String"
+            },
+            "traits": {
+                "smithy.api#private": {}
+            }
+        },
+        "aws.protocols#awsJson1_0": {
+            "type": "structure",
+            "mixins": [
+                {
+                    "target": "aws.protocols#HttpConfiguration"
+                }
+            ],
+            "members": {},
+            "traits": {
+                "smithy.api#documentation": "An RPC-based protocol that sends JSON payloads. This protocol does not use\nHTTP binding traits.",
+                "smithy.api#protocolDefinition": {
+                    "traits": [
+                        "smithy.api#timestampFormat",
+                        "smithy.api#cors",
+                        "smithy.api#endpoint",
+                        "smithy.api#hostLabel"
+                    ]
+                },
+                "smithy.api#trait": {
+                    "selector": "service"
+                }
+            }
+        },
+        "aws.protocols#awsJson1_1": {
+            "type": "structure",
+            "mixins": [
+                {
+                    "target": "aws.protocols#HttpConfiguration"
+                }
+            ],
+            "members": {},
+            "traits": {
+                "smithy.api#documentation": "An RPC-based protocol that sends JSON payloads. This protocol does not use\nHTTP binding traits.",
+                "smithy.api#protocolDefinition": {
+                    "traits": [
+                        "smithy.api#timestampFormat",
+                        "smithy.api#cors",
+                        "smithy.api#endpoint",
+                        "smithy.api#hostLabel"
+                    ]
+                },
+                "smithy.api#trait": {
+                    "selector": "service"
+                }
+            }
+        },
+        "aws.protocols#awsQuery": {
+            "type": "structure",
+            "members": {},
+            "traits": {
+                "smithy.api#deprecated": {},
+                "smithy.api#documentation": "An RPC-based protocol that sends 'POST' requests in the body as\n`x-www-form-urlencoded` strings and responses in XML documents. This\nprotocol does not use HTTP binding traits.",
+                "smithy.api#protocolDefinition": {
+                    "traits": [
+                        "smithy.api#timestampFormat",
+                        "smithy.api#cors",
+                        "smithy.api#endpoint",
+                        "smithy.api#hostLabel",
+                        "aws.protocols#awsQueryError",
+                        "smithy.api#xmlAttribute",
+                        "smithy.api#xmlFlattened",
+                        "smithy.api#xmlName",
+                        "smithy.api#xmlNamespace"
+                    ]
+                },
+                "smithy.api#trait": {
+                    "selector": "service [trait|xmlNamespace]"
+                },
+                "smithy.api#traitValidators": {
+                    "UnsupportedProtocolDocument": {
+                        "selector": "~> member :test(> document)",
+                        "message": "Document types are not supported with awsQuery"
+                    }
+                }
+            }
+        },
+        "aws.protocols#awsQueryCompatible": {
+            "type": "structure",
+            "members": {},
+            "traits": {
+                "smithy.api#documentation": "Enable backward compatibility when migrating from awsQuery to the awsJson\nprotocol or Smithy RPC v2 CBOR.",
+                "smithy.api#trait": {
+                    "selector": "service :test([trait|aws.protocols#awsJson1_0], [trait|smithy.protocols#rpcv2Cbor])"
+                }
+            }
+        },
+        "aws.protocols#awsQueryError": {
+            "type": "structure",
+            "members": {
+                "code": {
+                    "target": "smithy.api#String",
+                    "traits": {
+                        "smithy.api#documentation": "The value used to distinguish this error shape during serialization.",
+                        "smithy.api#required": {}
+                    }
+                },
+                "httpResponseCode": {
+                    "target": "smithy.api#Integer",
+                    "traits": {
+                        "smithy.api#documentation": "The HTTP response code used on a response containing this error shape.",
+                        "smithy.api#required": {}
+                    }
+                }
+            },
+            "traits": {
+                "smithy.api#documentation": "Provides the value in the 'Code' distinguishing field and HTTP response\ncode for an operation error.",
+                "smithy.api#trait": {
+                    "selector": "structure [trait|error]",
+                    "breakingChanges": [
+                        {
+                            "change": "any"
+                        }
+                    ]
+                }
+            }
+        },
+        "aws.protocols#ec2Query": {
+            "type": "structure",
+            "members": {},
+            "traits": {
+                "smithy.api#deprecated": {},
+                "smithy.api#documentation": "An RPC-based protocol that sends 'POST' requests in the body as Amazon EC2\nformatted `x-www-form-urlencoded` strings and responses in XML documents.\nThis protocol does not use HTTP binding traits.",
+                "smithy.api#protocolDefinition": {
+                    "traits": [
+                        "smithy.api#timestampFormat",
+                        "smithy.api#cors",
+                        "smithy.api#endpoint",
+                        "smithy.api#hostLabel",
+                        "aws.protocols#ec2QueryName",
+                        "smithy.api#xmlAttribute",
+                        "smithy.api#xmlFlattened",
+                        "smithy.api#xmlName",
+                        "smithy.api#xmlNamespace"
+                    ]
+                },
+                "smithy.api#trait": {
+                    "selector": "service [trait|xmlNamespace]"
+                },
+                "smithy.api#traitValidators": {
+                    "UnsupportedProtocolDocument": {
+                        "selector": "~> member :test(> document)",
+                        "message": "Document types are not supported with ec2Query"
+                    }
+                }
+            }
+        },
+        "aws.protocols#ec2QueryName": {
+            "type": "string",
+            "traits": {
+                "smithy.api#documentation": "Indicates the serialized name of a structure member when that structure is\nserialized for the input of an EC2 operation.",
+                "smithy.api#pattern": "^[a-zA-Z_][a-zA-Z_0-9-]*$",
+                "smithy.api#trait": {
+                    "selector": "structure > member"
+                }
+            }
+        },
+        "aws.protocols#httpChecksum": {
+            "type": "structure",
+            "members": {
+                "requestAlgorithmMember": {
+                    "target": "smithy.api#String",
+                    "traits": {
+                        "smithy.api#documentation": "Defines a top-level operation input member that is used to configure\nrequest checksum behavior."
+                    }
+                },
+                "requestChecksumRequired": {
+                    "target": "smithy.api#Boolean",
+                    "traits": {
+                        "smithy.api#documentation": "Indicates an operation requires a checksum in its HTTP request."
+                    }
+                },
+                "requestValidationModeMember": {
+                    "target": "smithy.api#String",
+                    "traits": {
+                        "smithy.api#documentation": "Defines a top-level operation input member used to opt-in to response\nchecksum validation."
+                    }
+                },
+                "responseAlgorithms": {
+                    "target": "aws.protocols#ChecksumAlgorithmSet",
+                    "traits": {
+                        "smithy.api#documentation": "Defines the checksum algorithms clients should look for when performing\nHTTP response checksum validation."
+                    }
+                }
+            },
+            "traits": {
+                "smithy.api#documentation": "Indicates that an operation supports checksum validation.",
+                "smithy.api#trait": {
+                    "selector": "operation",
+                    "breakingChanges": [
+                        {
+                            "change": "remove",
+                            "severity": "DANGER",
+                            "message": "Removing the trait removes the ability for clients to do request or response checksums. The service MUST continue to support old clients by supporting the `httpChecksum` trait."
+                        },
+                        {
+                            "change": "remove",
+                            "path": "/requestAlgorithmMember",
+                            "severity": "DANGER",
+                            "message": "`requestAlgorithmMember` was removed, so newly generated clients will no longer be able to pick the request checksum algorithms The service MUST continue to support old clients by supporting `requestAlgorithmMember`."
+                        },
+                        {
+                            "change": "remove",
+                            "path": "/requestValidationModeMember",
+                            "severity": "DANGER",
+                            "message": "`requestValidationModeMember` was removed, so newly generated clients will no longer validate response checksums. The service MUST continue to support old clients by supporting `requestValidationModeMember`."
+                        },
+                        {
+                            "change": "remove",
+                            "path": "/responseAlgorithms/member",
+                            "severity": "DANGER",
+                            "message": "Members of `responseAlgorithms` were removed, so newly generated clients will no longer validate response checksums for the removed algorithms. The service MUST continue to support old clients by supporting removed compression algorithms."
+                        }
+                    ]
+                },
+                "smithy.api#unstable": {}
+            }
+        },
+        "aws.protocols#restJson1": {
+            "type": "structure",
+            "mixins": [
+                {
+                    "target": "aws.protocols#HttpConfiguration"
+                }
+            ],
+            "members": {},
+            "traits": {
+                "smithy.api#documentation": "A RESTful protocol that sends JSON in structured payloads.",
+                "smithy.api#protocolDefinition": {
+                    "traits": [
+                        "smithy.api#timestampFormat",
+                        "smithy.api#cors",
+                        "smithy.api#endpoint",
+                        "smithy.api#hostLabel",
+                        "smithy.api#http",
+                        "smithy.api#httpError",
+                        "smithy.api#httpHeader",
+                        "smithy.api#httpLabel",
+                        "smithy.api#httpPayload",
+                        "smithy.api#httpPrefixHeaders",
+                        "smithy.api#httpQuery",
+                        "smithy.api#httpQueryParams",
+                        "smithy.api#httpResponseCode",
+                        "smithy.api#httpChecksumRequired",
+                        "smithy.api#jsonName"
+                    ]
+                },
+                "smithy.api#trait": {
+                    "selector": "service"
+                }
+            }
+        },
+        "aws.protocols#restXml": {
+            "type": "structure",
+            "mixins": [
+                {
+                    "target": "aws.protocols#HttpConfiguration"
+                }
+            ],
+            "members": {
+                "noErrorWrapping": {
+                    "target": "smithy.api#Boolean",
+                    "traits": {
+                        "smithy.api#deprecated": {},
+                        "smithy.api#documentation": "Disables the serialization wrapping of error properties in an 'Error'\nXML element."
+                    }
+                }
+            },
+            "traits": {
+                "smithy.api#deprecated": {},
+                "smithy.api#documentation": "A RESTful protocol that sends XML in structured payloads.",
+                "smithy.api#protocolDefinition": {
+                    "traits": [
+                        "smithy.api#timestampFormat",
+                        "smithy.api#cors",
+                        "smithy.api#endpoint",
+                        "smithy.api#hostLabel",
+                        "smithy.api#http",
+                        "smithy.api#httpError",
+                        "smithy.api#httpHeader",
+                        "smithy.api#httpLabel",
+                        "smithy.api#httpPayload",
+                        "smithy.api#httpPrefixHeaders",
+                        "smithy.api#httpQuery",
+                        "smithy.api#httpQueryParams",
+                        "smithy.api#httpResponseCode",
+                        "smithy.api#httpChecksumRequired",
+                        "smithy.api#xmlAttribute",
+                        "smithy.api#xmlFlattened",
+                        "smithy.api#xmlName",
+                        "smithy.api#xmlNamespace"
+                    ]
+                },
+                "smithy.api#trait": {
+                    "selector": "service"
+                },
+                "smithy.api#traitValidators": {
+                    "UnsupportedProtocolDocument": {
+                        "selector": "~> member :test(> document)",
+                        "message": "Document types are not supported with restXml"
+                    }
+                }
+            }
+        },
+        "clientapi#Client": {
+            "type": "structure",
+            "members": {
+                "id": {
+                    "target": "smithy.api#Integer",
+                    "traits": {
+                        "smithy.api#required": {}
+                    }
+                },
+                "current_age": {
+                    "target": "smithy.api#Integer"
+                },
+                "retirement_age": {
+                    "target": "smithy.api#Integer"
+                },
+                "birth_year": {
+                    "target": "smithy.api#Integer"
+                },
+                "birth_month": {
+                    "target": "smithy.api#Integer"
+                },
+                "gender": {
+                    "target": "smithy.api#String"
+                },
+                "address": {
+                    "target": "smithy.api#String"
+                },
+                "latitude": {
+                    "target": "smithy.api#Double"
+                },
+                "longitude": {
+                    "target": "smithy.api#Double"
+                },
+                "per_capita_income": {
+                    "target": "smithy.api#Double"
+                },
+                "yearly_income": {
+                    "target": "smithy.api#Double"
+                },
+                "total_debt": {
+                    "target": "smithy.api#Double"
+                },
+                "credit_score": {
+                    "target": "smithy.api#Integer"
+                },
+                "num_credit_cards": {
+                    "target": "smithy.api#Integer"
+                }
+            }
+        },
+        "clientapi#ClientList": {
+            "type": "list",
+            "member": {
+                "target": "clientapi#Client"
+            }
+        },
+        "clientapi#ClientService": {
+            "type": "service",
+            "version": "1.0",
+            "operations": [
+                {
+                    "target": "clientapi#CreateClient"
+                },
+                {
+                    "target": "clientapi#DeleteClient"
+                },
+                {
+                    "target": "clientapi#GetClient"
+                },
+                {
+                    "target": "clientapi#ListClients"
+                },
+                {
+                    "target": "clientapi#UpdateClient"
+                }
+            ],
+            "traits": {
+                "alloy#simpleRestJson": {},
+                "aws.protocols#restJson1": {}
+            }
+        },
+        "clientapi#CreateClient": {
+            "type": "operation",
+            "input": {
+                "target": "clientapi#CreateClientInput"
+            },
+            "output": {
+                "target": "clientapi#Client"
+            },
+            "traits": {
+                "smithy.api#http": {
+                    "method": "POST",
+                    "uri": "/clients",
+                    "code": 201
+                }
+            }
+        },
+        "clientapi#CreateClientInput": {
+            "type": "structure",
+            "members": {
+                "current_age": {
+                    "target": "smithy.api#Integer"
+                },
+                "retirement_age": {
+                    "target": "smithy.api#Integer"
+                },
+                "birth_year": {
+                    "target": "smithy.api#Integer"
+                },
+                "birth_month": {
+                    "target": "smithy.api#Integer"
+                },
+                "gender": {
+                    "target": "smithy.api#String"
+                },
+                "address": {
+                    "target": "smithy.api#String"
+                },
+                "latitude": {
+                    "target": "smithy.api#Double"
+                },
+                "longitude": {
+                    "target": "smithy.api#Double"
+                },
+                "per_capita_income": {
+                    "target": "smithy.api#Double"
+                },
+                "yearly_income": {
+                    "target": "smithy.api#Double"
+                },
+                "total_debt": {
+                    "target": "smithy.api#Double"
+                },
+                "credit_score": {
+                    "target": "smithy.api#Integer"
+                },
+                "num_credit_cards": {
+                    "target": "smithy.api#Integer"
+                }
+            }
+        },
+        "clientapi#DeleteClient": {
+            "type": "operation",
+            "input": {
+                "target": "clientapi#DeleteClientInput"
+            },
+            "output": {
+                "target": "smithy.api#Unit"
+            },
+            "traits": {
+                "smithy.api#http": {
+                    "method": "DELETE",
+                    "uri": "/clients/{id}",
+                    "code": 204
+                },
+                "smithy.api#idempotent": {}
+            }
+        },
+        "clientapi#DeleteClientInput": {
+            "type": "structure",
+            "members": {
+                "id": {
+                    "target": "smithy.api#Integer",
+                    "traits": {
+                        "smithy.api#httpLabel": {},
+                        "smithy.api#required": {}
+                    }
+                }
+            }
+        },
+        "clientapi#GetClient": {
+            "type": "operation",
+            "input": {
+                "target": "clientapi#GetClientInput"
+            },
+            "output": {
+                "target": "clientapi#Client"
+            },
+            "traits": {
+                "smithy.api#http": {
+                    "method": "GET",
+                    "uri": "/clients/{id}"
+                },
+                "smithy.api#readonly": {}
+            }
+        },
+        "clientapi#GetClientInput": {
+            "type": "structure",
+            "members": {
+                "id": {
+                    "target": "smithy.api#Integer",
+                    "traits": {
+                        "smithy.api#httpLabel": {},
+                        "smithy.api#required": {}
+                    }
+                }
+            }
+        },
+        "clientapi#ListClients": {
+            "type": "operation",
+            "input": {
+                "target": "smithy.api#Unit"
+            },
+            "output": {
+                "target": "clientapi#ListClientsOutput"
+            },
+            "traits": {
+                "smithy.api#http": {
+                    "method": "GET",
+                    "uri": "/clients"
+                },
+                "smithy.api#readonly": {}
+            }
+        },
+        "clientapi#ListClientsOutput": {
+            "type": "structure",
+            "members": {
+                "clients": {
+                    "target": "clientapi#ClientList"
+                }
+            }
+        },
+        "clientapi#UpdateClient": {
+            "type": "operation",
+            "input": {
+                "target": "clientapi#UpdateClientInput"
+            },
+            "output": {
+                "target": "clientapi#Client"
+            },
+            "traits": {
+                "smithy.api#http": {
+                    "method": "PUT",
+                    "uri": "/clients/{id}"
+                },
+                "smithy.api#idempotent": {}
+            }
+        },
+        "clientapi#UpdateClientInput": {
+            "type": "structure",
+            "members": {
+                "id": {
+                    "target": "smithy.api#Integer",
+                    "traits": {
+                        "smithy.api#httpLabel": {},
+                        "smithy.api#required": {}
+                    }
+                },
+                "current_age": {
+                    "target": "smithy.api#Integer"
+                },
+                "retirement_age": {
+                    "target": "smithy.api#Integer"
+                },
+                "birth_year": {
+                    "target": "smithy.api#Integer"
+                },
+                "birth_month": {
+                    "target": "smithy.api#Integer"
+                },
+                "gender": {
+                    "target": "smithy.api#String"
+                },
+                "address": {
+                    "target": "smithy.api#String"
+                },
+                "latitude": {
+                    "target": "smithy.api#Double"
+                },
+                "longitude": {
+                    "target": "smithy.api#Double"
+                },
+                "per_capita_income": {
+                    "target": "smithy.api#Double"
+                },
+                "yearly_income": {
+                    "target": "smithy.api#Double"
+                },
+                "total_debt": {
+                    "target": "smithy.api#Double"
+                },
+                "credit_score": {
+                    "target": "smithy.api#Integer"
+                },
+                "num_credit_cards": {
+                    "target": "smithy.api#Integer"
+                }
+            }
+        },
+        "smithy.openapi#SpecificationExtensionKey": {
+            "type": "string",
+            "traits": {
+                "smithy.api#pattern": "^x-.+$",
+                "smithy.api#private": {}
+            }
+        },
+        "smithy.openapi#specificationExtension": {
+            "type": "structure",
+            "members": {
+                "as": {
+                    "target": "smithy.openapi#SpecificationExtensionKey",
+                    "traits": {
+                        "smithy.api#documentation": "Explicitly name the specification extension.\nIf set must begin with `x-`, otherwise defaults to the target trait shape's ID normalized with hyphens and prepended with `x-`."
+                    }
+                }
+            },
+            "traits": {
+                "smithy.api#documentation": "Indicates a trait shape should be converted into an [OpenAPI specification extension](https://spec.openapis.org/oas/v3.1.0#specification-extensions).",
+                "smithy.api#trait": {
+                    "selector": "[trait|trait]",
+                    "breakingChanges": [
+                        {
+                            "change": "presence"
+                        },
+                        {
+                            "path": "/as",
+                            "change": "any"
+                        }
+                    ]
+                }
+            }
+        },
+        "smithy.protocols#StringList": {
+            "type": "list",
+            "member": {
+                "target": "smithy.api#String"
+            },
+            "traits": {
+                "smithy.api#documentation": "A list of String shapes.",
+                "smithy.api#private": {}
+            }
+        },
+        "smithy.protocols#rpcv2Cbor": {
+            "type": "structure",
+            "members": {
+                "http": {
+                    "target": "smithy.protocols#StringList",
+                    "traits": {
+                        "smithy.api#documentation": "Priority ordered list of supported HTTP protocol versions."
+                    }
+                },
+                "eventStreamHttp": {
+                    "target": "smithy.protocols#StringList",
+                    "traits": {
+                        "smithy.api#documentation": "Priority ordered list of supported HTTP protocol versions\nthat are required when using event streams."
+                    }
+                }
+            },
+            "traits": {
+                "smithy.api#documentation": "An RPC-based protocol that serializes CBOR payloads.",
+                "smithy.api#protocolDefinition": {
+                    "traits": [
+                        "smithy.api#cors",
+                        "smithy.api#endpoint",
+                        "smithy.api#hostLabel",
+                        "smithy.api#httpError"
+                    ]
+                },
+                "smithy.api#trait": {
+                    "selector": "service"
+                },
+                "smithy.api#traitValidators": {
+                    "rpcv2Cbor.NoDocuments": {
+                        "selector": "service ~> member :test(> document)",
+                        "message": "This protocol does not support document types in most possible scenarios.",
+                        "severity": "DANGER"
+                    }
+                }
+            }
+        }
+    }
+}

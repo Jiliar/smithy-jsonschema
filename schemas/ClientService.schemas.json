@@ -1,0 +1,331 @@
+{
+  "Client": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "number"
+      },
+      "current_age": {
+        "type": "number"
+      },
+      "retirement_age": {
+        "type": "number"
+      },
+      "birth_year": {
+        "type": "number"
+      },
+      "birth_month": {
+        "type": "number"
+      },
+      "gender": {
+        "type": "string"
+      },
+      "address": {
+        "type": "string"
+      },
+      "latitude": {
+        "type": "number",
+        "format": "double"
+      },
+      "longitude": {
+        "type": "number",
+        "format": "double"
+      },
+      "per_capita_income": {
+        "type": "number",
+        "format": "double"
+      },
+      "yearly_income": {
+        "type": "number",
+        "format": "double"
+      },
+      "total_debt": {
+        "type": "number",
+        "format": "double"
+      },
+      "credit_score": {
+        "type": "number"
+      },
+      "num_credit_cards": {
+        "type": "number"
+      }
+    },
+    "required": [
+      "id"
+    ]
+  },
+  "CreateClientRequestContent": {
+    "type": "object",
+    "properties": {
+      "current_age": {
+        "type": "number"
+      },
+      "retirement_age": {
+        "type": "number"
+      },
+      "birth_year": {
+        "type": "number"
+      },
+      "birth_month": {
+        "type": "number"
+      },
+      "gender": {
+        "type": "string"
+      },
+      "address": {
+        "type": "string"
+      },
+      "latitude": {
+        "type": "number",
+        "format": "double"
+      },
+      "longitude": {
+        "type": "number",
+        "format": "double"
+      },
+      "per_capita_income": {
+        "type": "number",
+        "format": "double"
+      },
+      "yearly_income": {
+        "type": "number",
+        "format": "double"
+      },
+      "total_debt": {
+        "type": "number",
+        "format": "double"
+      },
+      "credit_score": {
+        "type": "number"
+      },
+      "num_credit_cards": {
+        "type": "number"
+      }
+    }
+  },
+  "CreateClientResponseContent": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "number"
+      },
+      "current_age": {
+        "type": "number"
+      },
+      "retirement_age": {
+        "type": "number"
+      },
+      "birth_year": {
+        "type": "number"
+      },
+      "birth_month": {
+        "type": "number"
+      },
+      "gender": {
+        "type": "string"
+      },
+      "address": {
+        "type": "string"
+      },
+      "latitude": {
+        "type": "number",
+        "format": "double"
+      },
+      "longitude": {
+        "type": "number",
+        "format": "double"
+      },
+      "per_capita_income": {
+        "type": "number",
+        "format": "double"
+      },
+      "yearly_income": {
+        "type": "number",
+        "format": "double"
+      },
+      "total_debt": {
+        "type": "number",
+        "format": "double"
+      },
+      "credit_score": {
+        "type": "number"
+      },
+      "num_credit_cards": {
+        "type": "number"
+      }
+    },
+    "required": [
+      "id"
+    ]
+  },
+  "GetClientResponseContent": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "number"
+      },
+      "current_age": {
+        "type": "number"
+      },
+      "retirement_age": {
+        "type": "number"
+      },
+      "birth_year": {
+        "type": "number"
+      },
+      "birth_month": {
+        "type": "number"
+      },
+      "gender": {
+        "type": "string"
+      },
+      "address": {
+        "type": "string"
+      },
+      "latitude": {
+        "type": "number",
+        "format": "double"
+      },
+      "longitude": {
+        "type": "number",
+        "format": "double"
+      },
+      "per_capita_income": {
+        "type": "number",
+        "format": "double"
+      },
+      "yearly_income": {
+        "type": "number",
+        "format": "double"
+      },
+      "total_debt": {
+        "type": "number",
+        "format": "double"
+      },
+      "credit_score": {
+        "type": "number"
+      },
+      "num_credit_cards": {
+        "type": "number"
+      }
+    },
+    "required": [
+      "id"
+    ]
+  },
+  "ListClientsResponseContent": {
+    "type": "object",
+    "properties": {
+      "clients": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Client"
+        }
+      }
+    }
+  },
+  "UpdateClientRequestContent": {
+    "type": "object",
+    "properties": {
+      "current_age": {
+        "type": "number"
+      },
+      "retirement_age": {
+        "type": "number"
+      },
+      "birth_year": {
+        "type": "number"
+      },
+      "birth_month": {
+        "type": "number"
+      },
+      "gender": {
+        "type": "string"
+      },
+      "address": {
+        "type": "string"
+      },
+      "latitude": {
+        "type": "number",
+        "format": "double"
+      },
+      "longitude": {
+        "type": "number",
+        "format": "double"
+      },
+      "per_capita_income": {
+        "type": "number",
+        "format": "double"
+      },
+      "yearly_income": {
+        "type": "number",
+        "format": "double"
+      },
+      "total_debt": {
+        "type": "number",
+        "format": "double"
+      },
+      "credit_score": {
+        "type": "number"
+      },
+      "num_credit_cards": {
+        "type": "number"
+      }
+    }
+  },
+  "UpdateClientResponseContent": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "number"
+      },
+      "current_age": {
+        "type": "number"
+      },
+      "retirement_age": {
+        "type": "number"
+      },
+      "birth_year": {
+        "type": "number"
+      },
+      "birth_month": {
+        "type": "number"
+      },
+      "gender": {
+        "type": "string"
+      },
+      "address": {
+        "type": "string"
+      },
+      "latitude": {
+        "type": "number",
+        "format": "double"
+      },
+      "longitude": {
+        "type": "number",
+        "format": "double"
+      },
+      "per_capita_income": {
+        "type": "number",
+        "format": "double"
+      },
+      "yearly_income": {
+        "type": "number",
+        "format": "double"
+      },
+      "total_debt": {
+        "type": "number",
+        "format": "double"
+      },
+      "credit_score": {
+        "type": "number"
+      },
+      "num_credit_cards": {
+        "type": "number"
+      }
+    },
+    "required": [
+      "id"
+    ]
+  }
+}

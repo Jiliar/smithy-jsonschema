@@ -1,0 +1,55 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "number"
+    },
+    "current_age": {
+      "type": "number"
+    },
+    "retirement_age": {
+      "type": "number"
+    },
+    "birth_year": {
+      "type": "number"
+    },
+    "birth_month": {
+      "type": "number"
+    },
+    "gender": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "latitude": {
+      "type": "number",
+      "format": "double"
+    },
+    "longitude": {
+      "type": "number",
+      "format": "double"
+    },
+    "per_capita_income": {
+      "type": "number",
+      "format": "double"
+    },
+    "yearly_income": {
+      "type": "number",
+      "format": "double"
+    },
+    "total_debt": {
+      "type": "number",
+      "format": "double"
+    },
+    "credit_score": {
+      "type": "number"
+    },
+    "num_credit_cards": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "id"
+  ]
+}
