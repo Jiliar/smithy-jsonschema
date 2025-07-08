@@ -34,7 +34,7 @@ done
 
 echo "📂 Finished extracting schemas."
 
-# Step 2A: Convert all *.schemas.json to AJV format (grouped)
+# Step 2A: Convert grouped *.schemas.json to AJV format with type normalization
 echo "🔁 Converting grouped schemas to AJV-compatible format..."
 find "$OUTPUT_BASE" -type f -name '*.schemas.json' | while read -r SCHEMA_FILE; do
   REL_PATH="${SCHEMA_FILE#$OUTPUT_BASE/}"
@@ -43,7 +43,13 @@ find "$OUTPUT_BASE" -type f -name '*.schemas.json' | while read -r SCHEMA_FILE; 
 
   mkdir -p "$DEST_DIR"
 
-  jq '{
+  jq 'walk(
+    if type == "object" and has("type") then
+      if .type == "double" or .type == "float" then .type = "number"
+      elif .type == "long" then .type = "integer"
+      else . end
+    else . end
+  ) | {
     "$schema": "http://json-schema.org/draft-07/schema#",
     "definitions": .
   }' "$SCHEMA_FILE" > "$DEST_PATH"
@@ -51,7 +57,7 @@ find "$OUTPUT_BASE" -type f -name '*.schemas.json' | while read -r SCHEMA_FILE; 
   echo "✅ Grouped → $DEST_PATH"
 done
 
-# Step 2B: Convert all individual *.schema.json to AJV-compatible format
+# Step 2B: Convert individual *.schema.json to AJV format with type normalization
 echo "🔁 Converting individual schemas to AJV-compatible format..."
 find "$OUTPUT_BASE" -type f -name '*.schema.json' ! -name '*.schemas.json' | while read -r FILE; do
   REL_PATH="${FILE#$OUTPUT_BASE/}"
@@ -60,7 +66,13 @@ find "$OUTPUT_BASE" -type f -name '*.schema.json' ! -name '*.schemas.json' | whi
 
   mkdir -p "$DEST_DIR"
 
-  jq '{
+  jq 'walk(
+    if type == "object" and has("type") then
+      if .type == "double" or .type == "float" then .type = "number"
+      elif .type == "long" then .type = "integer"
+      else . end
+    else . end
+  ) | {
     "$schema": "http://json-schema.org/draft-07/schema#"
   } + .' "$FILE" > "$DEST_PATH"
 
