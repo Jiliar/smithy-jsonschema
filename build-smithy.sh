@@ -2,6 +2,7 @@
 
 set -e
 
+
 # Run Smithy build
 echo "🔧 Running Smithy build..."
 smithy build
@@ -9,6 +10,7 @@ smithy build
 echo "✅ Smithy build completed successfully."
 
 OPENAPI_DIR="build/smithy/source/openapi"
+SCHEMA_DRAFT="http://json-schema.org/draft-07/schema#"
 OUTPUT_BASE="schemas"
 AJV_DIR="ajv"
 
@@ -43,7 +45,7 @@ find "$OUTPUT_BASE" -type f -name '*.schemas.json' | while read -r SCHEMA_FILE; 
 
   mkdir -p "$DEST_DIR"
 
-  jq 'walk(
+  jq --arg SCHEMA_DRAFT "$SCHEMA_DRAFT" 'walk(
     if type == "object" then
       if .type == "double" or .type == "float" then
         .type = "number" | del(.format)
@@ -56,7 +58,7 @@ find "$OUTPUT_BASE" -type f -name '*.schemas.json' | while read -r SCHEMA_FILE; 
       else . end
     else . end
   ) | {
-    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$schema": $SCHEMA_DRAFT,
     "definitions": .
   }' "$SCHEMA_FILE" > "$DEST_PATH"
 
@@ -73,7 +75,7 @@ find "$OUTPUT_BASE" -type f -name '*.schema.json' ! -name '*.schemas.json' | whi
 
   mkdir -p "$DEST_DIR"
 
-  jq 'walk(
+  jq --arg SCHEMA_DRAFT "$SCHEMA_DRAFT" 'walk(
     if type == "object" then
       if .type == "double" or .type == "float" then
         .type = "number" | del(.format)
@@ -86,7 +88,7 @@ find "$OUTPUT_BASE" -type f -name '*.schema.json' ! -name '*.schemas.json' | whi
       else . end
     else . end
   ) | {
-    "$schema": "http://json-schema.org/draft-07/schema#"
+    "$schema": $SCHEMA_DRAFT
   } + .' "$FILE" > "$DEST_PATH"
 
   echo "✅ Single → $DEST_PATH"
@@ -141,14 +143,14 @@ find "$OUTPUT_BASE" -type f -name '*.schema.json' -o -name '*.schemas.json' | wh
 
   # Normalize types before using ajv-cli
   TEMP_NORMALIZED=$(mktemp)
-  jq 'walk(
+  jq --arg SCHEMA_DRAFT "$SCHEMA_DRAFT" 'walk(
     if type == "object" and has("type") then
       if .type == "double" or .type == "float" then .type = "number"
       elif .type == "long" then .type = "integer"
       else . end
     else . end
   ) | {
-    "$schema": "http://json-schema.org/draft-07/schema#"
+    "$schema": $SCHEMA_DRAFT
   } + .' "$FILE" > "$TEMP_NORMALIZED"
 
   rm "$TEMP_NORMALIZED"
