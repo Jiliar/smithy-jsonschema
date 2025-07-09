@@ -24,24 +24,19 @@
       "type": "string"
     },
     "latitude": {
-      "type": "number",
-      "format": "double"
+      "type": "number"
     },
     "longitude": {
-      "type": "number",
-      "format": "double"
+      "type": "number"
     },
     "per_capita_income": {
-      "type": "number",
-      "format": "double"
+      "type": "number"
     },
     "yearly_income": {
-      "type": "number",
-      "format": "double"
+      "type": "number"
     },
     "total_debt": {
-      "type": "number",
-      "format": "double"
+      "type": "number"
     },
     "credit_score": {
       "type": "number"

@@ -1,6 +1,6 @@
 # 🔁 Smithy to AJV Schema Converter
 
-This project automates the transformation of [Smithy](https://smithy.io) model files into [AJV](https://ajv.js.org/) compatible JSON Schemas. It includes validation of the schemas using `check-jsonschema` and organizes both the individual and grouped outputs.
+This project automates the transformation of [Smithy](https://smithy.io) model files into [AJV](https://ajv.js.org/) compatible JSON Schemas. It includes validation of the schemas using `ajv-cli` and organizes both the individual and grouped outputs.
 
 ---
 
@@ -9,7 +9,7 @@ This project automates the transformation of [Smithy](https://smithy.io) model f
 - Converts `.smithy` models to OpenAPI schemas using `smithy-cli`
 - Extracts and flattens JSON Schema definitions from OpenAPI files
 - Converts schemas to AJV-compatible JSON format
-- Validates the schemas with `check-jsonschema`
+- Validates the schemas using ajv-cli
 - Organizes outputs into:
   - `schemas/` → extracted raw schemas
   - `ajv/` → final AJV-compatible files
@@ -23,12 +23,13 @@ This project automates the transformation of [Smithy](https://smithy.io) model f
 Install the required tools using Homebrew:
 
 ```bash
-brew install smithy-cli jq check-jsonschema
+brew install smithy-cli jq node
+npm install -g ajv-cli
 ```
 
 ### 🐧 Debian/Ubuntu Linux
 
-Install the same tools using APT and `pip`:
+Install the same tools using APT and `npm`:
 
 ```bash
 sudo apt update
@@ -38,10 +39,11 @@ sudo mv smithy-cli.jar /usr/local/bin/smithy-cli.jar
 echo -e '#!/bin/bash\njava -jar /usr/local/bin/smithy-cli.jar "$@"' | sudo tee /usr/local/bin/smithy > /dev/null
 sudo chmod +x /usr/local/bin/smithy
 
-pip install check-jsonschema
+sudo apt install npm
+npm install -g ajv-cli
 ```
 
-> ✅ After installation, you should be able to run `smithy`, `jq`, and `check-jsonschema` from your terminal.
+> ✅ After installation, you should be able to run `smithy`, `jq`, and `ajv` from your terminal.
 
 ---
 
@@ -89,7 +91,7 @@ This will:
 - Run `smithy build` to generate OpenAPI output
 - Extract JSON schemas from the OpenAPI documents
 - Convert all schemas to AJV-compatible format
-- Validate each resulting AJV schema using `check-jsonschema`
+- Validate each resulting AJV schema using `ajv-cli`
 
 ---
 
@@ -122,7 +124,7 @@ This will:
    - Individual schemas are wrapped with `$schema: "http://json-schema.org/draft-07/schema#"`.
 
 4. **Validation**:  
-   All resulting `.ajv.json` schemas are validated with `check-jsonschema --check-metaschema` to ensure they comply with JSON Schema Draft-07.
+   All resulting `.ajv.json` schemas are validated with `ajv validate` using the `ajv-cli` tool to ensure compliance with JSON Schema Draft-07.
 
 ---
 

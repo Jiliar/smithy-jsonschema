@@ -5,7 +5,54 @@
     "clients": {
       "type": "array",
       "items": {
-        "$ref": "#/components/schemas/Client"
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "current_age": {
+            "type": "number"
+          },
+          "retirement_age": {
+            "type": "number"
+          },
+          "birth_year": {
+            "type": "number"
+          },
+          "birth_month": {
+            "type": "number"
+          },
+          "gender": {
+            "type": "string"
+          },
+          "address": {
+            "type": "string"
+          },
+          "latitude": {
+            "type": "number"
+          },
+          "longitude": {
+            "type": "number"
+          },
+          "per_capita_income": {
+            "type": "number"
+          },
+          "yearly_income": {
+            "type": "number"
+          },
+          "total_debt": {
+            "type": "number"
+          },
+          "credit_score": {
+            "type": "number"
+          },
+          "num_credit_cards": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "id"
+        ]
       }
     }
   }
