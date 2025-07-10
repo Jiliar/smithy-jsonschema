@@ -7,9 +7,13 @@
     "dependencies": [
       "software.amazon.smithy:smithy-openapi:1.60.3",
       "software.amazon.smithy:smithy-model:1.60.3",
-      "software.amazon.smithy:smithy-jsonschema:1.60.3",
       "software.amazon.smithy:smithy-aws-traits:1.60.3",
-      "com.disneystreaming.alloy:alloy-core:0.3.27"
+      "com.disneystreaming.alloy:alloy-core:0.3.27",
+      "software.amazon.smithy.typescript:smithy-typescript-codegen:0.32.0",
+      "com.disneystreaming.schemaregistry:schema-registry-common-smithy:3.10.0"
+    ],
+    "repositories": [
+      { "url": "https://artifactory.us-east-1.bamgrid.net/sdp-maven/" }
     ]
   },
   "plugins": {
@@ -26,6 +30,13 @@
       "outputDirectory": "build/json-schema",
       "protocol": "aws.protocols#restJson1",
       "version": "3.1.0"
+    },
+    "typescript-codegen": {
+      "service": "clientapi#ClientService",
+      "target": "node",
+      "outputDirectory": "build/typescript",
+      "package": "client-sdk",
+      "packageVersion": "1.0.0"
     }
   }
 }
